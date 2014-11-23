@@ -11,6 +11,7 @@ import java.io.FileInputStream;
 import java.io.Reader;
 import java.util.ArrayList;
 import java.io.File;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Collections;
 
@@ -89,7 +90,9 @@ public class OlympianManager {
 olympian.add(splittedOlymps);
         }
         textReader.close();
+        //System.out.println(olympian);
         return textData;
+
     }
 
 public static void main(String[] args) throws IOException {
@@ -115,8 +118,19 @@ public static void main(String[] args) throws IOException {
     }
 
     public ArrayList getOlympians() {
+      // main();
+        int i;
+        for ( i=0; i < olympian.size(); i++ ) {
+            System.out.println(olympian);
+
+        }
+        System.out.println("testing123");
+       // System.out.println(olympian);
         return olympian;
+
     }
+
+
 
      /*   InputStream is = null;
         InputStreamReader isr = null;

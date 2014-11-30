@@ -7,7 +7,7 @@ import java.util.*;
 public class TeamManager {
 
     public static void main(String[] args){
-
+//randomize players and make teams (not done yet)
         OlympianManager xyz = new OlympianManager();
         //int i = 0;
        // System.out.println(xyz.olympian);

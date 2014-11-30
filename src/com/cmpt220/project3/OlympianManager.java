@@ -20,6 +20,7 @@ import java.util.Collections;
 /**
  * Created by Zain on 11/6/2014.
  */
+//this class used to load olympians from file and store them in an array of type Olympian
 public class OlympianManager {
     public ArrayList olympian= new ArrayList();
 
@@ -41,6 +42,8 @@ public class OlympianManager {
         data = reader.read();
     }
     reader.close();*/
+
+    //file path
     private String path;
 
     public OlympianManager(String file_path) {
@@ -51,7 +54,7 @@ public class OlympianManager {
 
     }
 
-
+//detect number of lines
     int readLines() throws IOException{
     FileReader file_lgoo = new FileReader(path);
     BufferedReader bf = new BufferedReader(file_lgoo);
@@ -63,6 +66,7 @@ public class OlympianManager {
     bf.close();
     return numberOfLines;
 }
+    //verify file
     public String[] OpenFile() throws IOException {
         FileReader fr = new FileReader(path);
         BufferedReader textReader = new BufferedReader(fr);
@@ -77,7 +81,7 @@ public class OlympianManager {
             textData[i] = textReader.readLine();
             //"name,M,18"
           String[] splittedData = textData[i].split(",");
-
+//determine sex of each line
             Sex sextemp;
             if (splittedData[1].equals("M")) {
             sextemp = Sex.MALE;
@@ -85,18 +89,21 @@ public class OlympianManager {
             else {
                 sextemp = Sex.FEMALE;
             }
-
+// format string data into olympian data
         Olympian splittedOlymps= new Olympian(splittedData[0],sextemp,Integer.parseInt(splittedData[2]));
+            //add data to olympian arraylist
 olympian.add(splittedOlymps);
         }
         textReader.close();
         //System.out.println(olympian);
+        //System.out.println(olympian.size());
         return textData;
 
     }
 
 public static void main(String[] args) throws IOException {
     String file_name= "C:\\\\Users\\\\Zain\\\\IdeaProjects\\\\cmpt_project3\\\\src\\\\com\\\\cmpt220\\\\project3\\\\olympians.lgoo";
+    //file format verification
     if (!file_name.endsWith(".lgoo"))
     {
         System.out.println("Invalid file type, please use an Lgoo file");
@@ -105,10 +112,10 @@ public static void main(String[] args) throws IOException {
     try {
         OlympianManager file = new OlympianManager(file_name);
         String[] aryLines = file.OpenFile();
-
+//debugging purposes, print out string of olympians from file.
         int i;
         for ( i=0; i < aryLines.length; i++ ) {
-            System.out.println( aryLines[ i ] ) ;
+           // System.out.println( aryLines[ i ] ) ;
 
         }
     }
@@ -118,17 +125,26 @@ public static void main(String[] args) throws IOException {
     }
 
     public ArrayList getOlympians() {
+//function to print out olympian array in Main
+
+
       // main();
         int i;
         for ( i=0; i < olympian.size(); i++ ) {
-            System.out.println(olympian);
+            System.out.println(olympian.get(i));
 
         }
+
+        //System.out.println(olympian.size());
+       //
+       // for debugging purposes
         System.out.println("testing123");
        // System.out.println(olympian);
         return olympian;
 
     }
+
+
 
 
 

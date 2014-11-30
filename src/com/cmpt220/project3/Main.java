@@ -8,6 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         OlympianManager xyz = new OlympianManager();
+
         //app welcome message
         System.out.println("Welcome To the Smith Family Olympics App. Enter a command or press h for help.");
         System.out.println("Please enter a command or type h for help");
@@ -16,10 +17,17 @@ public class Main {
             System.out.println("You need to select an option.... are you feeling ok?");
         else if (args[0].equals("o") || args[0].equals("olympians")) {
             //try {
-            xyz.getOlympians();
-
+            try {
+                xyz.main(args);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            //print list of olympians
+           xyz.getOlympians();
+System.out.println(xyz.olympian.size());
         }
         else if (args[0].equals("q") || args[0].equals("quit")) {
+            //quits app
             System.out.println("Good Bye");
             System.exit(0);
         }

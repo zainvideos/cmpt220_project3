@@ -4,7 +4,7 @@ package com.cmpt220.project3;
  * Created by Zain on 11/17/2014.
  */
 public class Olympian {
-
+// Used to Construct each Olympian
         public String Name;
         public Sex sex;
         public int age;

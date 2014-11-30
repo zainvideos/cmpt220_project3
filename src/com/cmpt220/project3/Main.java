@@ -17,11 +17,7 @@ public class Main {
             System.out.println("You need to select an option.... are you feeling ok?");
         else if (args[0].equals("o") || args[0].equals("olympians")) {
             //try {
-            try {
-                xyz.main(args);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+           
             //print list of olympians
            xyz.getOlympians();
 System.out.println(xyz.olympian.size());

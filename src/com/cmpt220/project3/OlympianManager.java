@@ -101,7 +101,7 @@ olympian.add(splittedOlymps);
 
     }
 
-public static void main(String[] args) throws IOException {
+/*public static void main(String[] args) throws IOException {
     String file_name= "C:\\\\Users\\\\Zain\\\\IdeaProjects\\\\cmpt_project3\\\\src\\\\com\\\\cmpt220\\\\project3\\\\olympians.lgoo";
     //file format verification
     if (!file_name.endsWith(".lgoo"))
@@ -123,7 +123,7 @@ public static void main(String[] args) throws IOException {
         System.out.println( e.getMessage() );
     }
     }
-
+*/
     public ArrayList getOlympians() {
 //function to print out olympian array in Main
 

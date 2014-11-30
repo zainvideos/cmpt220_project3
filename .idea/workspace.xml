@@ -23,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/cmpt220/project3/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="1088">
-              <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.49088147" vertical-offset="0" max-vertical-offset="1020">
+              <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,8 +48,8 @@
       <file leaf-file-name="OlympianManager.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cmpt220/project3/OlympianManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.714286" vertical-offset="1632" max-vertical-offset="4250">
-              <caret line="114" column="62" selection-start-line="114" selection-start-column="62" selection-end-line="114" selection-end-column="62" />
+            <state vertical-scroll-proportion="-7.321429" vertical-offset="1886" max-vertical-offset="4250">
+              <caret line="125" column="2" selection-start-line="125" selection-start-column="2" selection-end-line="125" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="olympians.lgoo" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="olympians.lgoo" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cmpt220/project3/olympians.lgoo">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="658">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
               <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
               <folding />
             </state>
@@ -92,7 +92,24 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="3688" max-vertical-offset="4879">
               <caret line="290" column="9" selection-start-line="288" selection-start-column="9" selection-end-line="290" selection-end-column="9" />
-              <folding />
+              <folding>
+                <element signature="e#3138#3139#0" expanded="false" />
+                <element signature="e#3174#3175#0" expanded="false" />
+                <element signature="e#3547#3548#0" expanded="false" />
+                <element signature="e#3581#3582#0" expanded="false" />
+                <element signature="e#3937#3938#0" expanded="false" />
+                <element signature="e#3968#3969#0" expanded="false" />
+                <element signature="e#4342#4343#0" expanded="false" />
+                <element signature="e#4373#4374#0" expanded="false" />
+                <element signature="e#4785#4786#0" expanded="false" />
+                <element signature="e#4827#4828#0" expanded="false" />
+                <element signature="e#5132#5133#0" expanded="false" />
+                <element signature="e#5167#5168#0" expanded="false" />
+                <element signature="e#5289#5290#0" expanded="false" />
+                <element signature="e#5330#5331#0" expanded="false" />
+                <element signature="e#5493#5494#0" expanded="false" />
+                <element signature="e#5539#5540#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,10 +137,10 @@
         <option value="$PROJECT_DIR$/src/com/cmpt220/project3/Sex.java" />
         <option value="$PROJECT_DIR$/src/com/cmpt220/project3/Team.java" />
         <option value="$PROJECT_DIR$/src/com/cmpt220/project3/olympians.lgoo" />
-        <option value="$PROJECT_DIR$/src/com/cmpt220/project3/Main.java" />
         <option value="$PROJECT_DIR$/src/com/cmpt220/project3/Olympian.java" />
-        <option value="$PROJECT_DIR$/src/com/cmpt220/project3/OlympianManager.java" />
         <option value="$PROJECT_DIR$/src/com/cmpt220/project3/TeamManager.java" />
+        <option value="$PROJECT_DIR$/src/com/cmpt220/project3/OlympianManager.java" />
+        <option value="$PROJECT_DIR$/src/com/cmpt220/project3/Main.java" />
       </list>
     </option>
   </component>
@@ -171,7 +188,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
   </component>
-  <component name="RunManager" selected="Application.OlympianManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="com.cmpt220.project3.Main" />
@@ -345,8 +362,8 @@
     </list>
     <recent_temporary>
       <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Application.OlympianManager" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="Application.OlympianManager" />
         <item index="2" class="java.lang.String" itemvalue="Application.TeamManager" />
       </list>
     </recent_temporary>
@@ -499,7 +516,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4930" max-vertical-offset="5151">
           <caret line="290" column="9" selection-start-line="288" selection-start-column="9" selection-end-line="290" selection-end-column="9" />
-          <folding />
+          <folding>
+            <element signature="e#3138#3139#0" expanded="false" />
+            <element signature="e#3174#3175#0" expanded="false" />
+            <element signature="e#3547#3548#0" expanded="false" />
+            <element signature="e#3581#3582#0" expanded="false" />
+            <element signature="e#3937#3938#0" expanded="false" />
+            <element signature="e#3968#3969#0" expanded="false" />
+            <element signature="e#4342#4343#0" expanded="false" />
+            <element signature="e#4373#4374#0" expanded="false" />
+            <element signature="e#4785#4786#0" expanded="false" />
+            <element signature="e#4827#4828#0" expanded="false" />
+            <element signature="e#5132#5133#0" expanded="false" />
+            <element signature="e#5167#5168#0" expanded="false" />
+            <element signature="e#5289#5290#0" expanded="false" />
+            <element signature="e#5330#5331#0" expanded="false" />
+            <element signature="e#5493#5494#0" expanded="false" />
+            <element signature="e#5539#5540#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -567,7 +601,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4930" max-vertical-offset="5151">
           <caret line="290" column="9" selection-start-line="288" selection-start-column="9" selection-end-line="290" selection-end-column="9" />
-          <folding />
+          <folding>
+            <element signature="e#3138#3139#0" expanded="false" />
+            <element signature="e#3174#3175#0" expanded="false" />
+            <element signature="e#3547#3548#0" expanded="false" />
+            <element signature="e#3581#3582#0" expanded="false" />
+            <element signature="e#3937#3938#0" expanded="false" />
+            <element signature="e#3968#3969#0" expanded="false" />
+            <element signature="e#4342#4343#0" expanded="false" />
+            <element signature="e#4373#4374#0" expanded="false" />
+            <element signature="e#4785#4786#0" expanded="false" />
+            <element signature="e#4827#4828#0" expanded="false" />
+            <element signature="e#5132#5133#0" expanded="false" />
+            <element signature="e#5167#5168#0" expanded="false" />
+            <element signature="e#5289#5290#0" expanded="false" />
+            <element signature="e#5330#5331#0" expanded="false" />
+            <element signature="e#5493#5494#0" expanded="false" />
+            <element signature="e#5539#5540#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -627,7 +678,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="5151">
           <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding />
+          <folding>
+            <element signature="e#3138#3139#0" expanded="false" />
+            <element signature="e#3174#3175#0" expanded="false" />
+            <element signature="e#3547#3548#0" expanded="false" />
+            <element signature="e#3581#3582#0" expanded="false" />
+            <element signature="e#3937#3938#0" expanded="false" />
+            <element signature="e#3968#3969#0" expanded="false" />
+            <element signature="e#4342#4343#0" expanded="false" />
+            <element signature="e#4373#4374#0" expanded="false" />
+            <element signature="e#4785#4786#0" expanded="false" />
+            <element signature="e#4827#4828#0" expanded="false" />
+            <element signature="e#5132#5133#0" expanded="false" />
+            <element signature="e#5167#5168#0" expanded="false" />
+            <element signature="e#5289#5290#0" expanded="false" />
+            <element signature="e#5330#5331#0" expanded="false" />
+            <element signature="e#5493#5494#0" expanded="false" />
+            <element signature="e#5539#5540#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -663,7 +731,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4242" max-vertical-offset="4879">
           <caret line="290" column="9" selection-start-line="288" selection-start-column="9" selection-end-line="290" selection-end-column="9" />
-          <folding />
+          <folding>
+            <element signature="e#3138#3139#0" expanded="false" />
+            <element signature="e#3174#3175#0" expanded="false" />
+            <element signature="e#3547#3548#0" expanded="false" />
+            <element signature="e#3581#3582#0" expanded="false" />
+            <element signature="e#3937#3938#0" expanded="false" />
+            <element signature="e#3968#3969#0" expanded="false" />
+            <element signature="e#4342#4343#0" expanded="false" />
+            <element signature="e#4373#4374#0" expanded="false" />
+            <element signature="e#4785#4786#0" expanded="false" />
+            <element signature="e#4827#4828#0" expanded="false" />
+            <element signature="e#5132#5133#0" expanded="false" />
+            <element signature="e#5167#5168#0" expanded="false" />
+            <element signature="e#5289#5290#0" expanded="false" />
+            <element signature="e#5330#5331#0" expanded="false" />
+            <element signature="e#5493#5494#0" expanded="false" />
+            <element signature="e#5539#5540#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -672,16 +757,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
           <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cmpt220/project3/OlympianManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.714286" vertical-offset="1632" max-vertical-offset="4250">
-          <caret line="114" column="62" selection-start-line="114" selection-start-column="62" selection-end-line="114" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -709,21 +784,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cmpt220/project3/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/cmpt220/project3/olympians.lgoo">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="1088">
-          <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cmpt220/project3/OlympianManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.321429" vertical-offset="1886" max-vertical-offset="4250">
+          <caret line="125" column="2" selection-start-line="125" selection-start-column="2" selection-end-line="125" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cmpt220/project3/olympians.lgoo">
+    <entry file="file://$PROJECT_DIR$/src/com/cmpt220/project3/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
+        <state vertical-scroll-proportion="0.49088147" vertical-offset="0" max-vertical-offset="1020">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

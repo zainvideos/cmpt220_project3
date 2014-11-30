@@ -17,9 +17,16 @@ public class Main {
             System.out.println("You need to select an option.... are you feeling ok?");
         else if (args[0].equals("o") || args[0].equals("olympians")) {
             //try {
-           
+
             //print list of olympians
-           xyz.getOlympians();
+            try {
+                xyz.readLines();
+                xyz.OpenFile();
+                
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            xyz.getOlympians();
 System.out.println(xyz.olympian.size());
         }
         else if (args[0].equals("q") || args[0].equals("quit")) {

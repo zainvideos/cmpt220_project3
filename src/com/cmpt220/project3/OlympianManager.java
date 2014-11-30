@@ -22,7 +22,8 @@ import java.util.Collections;
  */
 //this class used to load olympians from file and store them in an array of type Olympian
 public class OlympianManager {
-    public ArrayList olympian= new ArrayList();
+    ArrayList<Object> olympian = new ArrayList<Object>();
+    //public ArrayList olympian= new ArrayList();
 
 
    // public OlympianManager (String cat) {
@@ -44,7 +45,7 @@ public class OlympianManager {
     reader.close();*/
 
     //file path
-    private String path;
+   // private String path;
 
     public OlympianManager(String file_path) {
         path = file_path;
@@ -53,7 +54,7 @@ public class OlympianManager {
     public OlympianManager() {
 
     }
-
+    String path= "C:\\\\Users\\\\Zain\\\\IdeaProjects\\\\cmpt_project3\\\\src\\\\com\\\\cmpt220\\\\project3\\\\olympians.lgoo";
 //detect number of lines
     int readLines() throws IOException{
     FileReader file_lgoo = new FileReader(path);
@@ -144,11 +145,10 @@ olympian.add(splittedOlymps);
 
     }
 
+}
 
-
-
-
-     /*   InputStream is = null;
+//GARBAGE:
+  /*   InputStream is = null;
         InputStreamReader isr = null;
         BufferedReader br = null;
     String filePath = "C:\\\\Users\\\\Zain\\\\IdeaProjects\\\\cmpt_project3\\\\src\\\\com\\\\cmpt220\\\\project3\\\\olympians.lgoo";
@@ -207,7 +207,7 @@ olympian.add(splittedOlymps);
                 System.out.println(olympians.get(i));
             }*/
 
-            // for each character in the buffer
+// for each character in the buffer
             /*for (char c : cbuf) {
                 // if char is empty
                 if (c == (char) 0) {
@@ -241,6 +241,3 @@ olympian.add(splittedOlymps);
 
     }
 */
-
-}
-

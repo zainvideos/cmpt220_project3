@@ -22,7 +22,7 @@ public class Main {
             try {
                 xyz.readLines();
                 xyz.OpenFile();
-                
+
             } catch (IOException e) {
                 e.printStackTrace();
             }

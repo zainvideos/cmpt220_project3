@@ -22,7 +22,7 @@ import java.util.Collections;
  */
 //this class used to load olympians from file and store them in an array of type Olympian
 public class OlympianManager {
-    ArrayList<Object> olympian = new ArrayList<Object>();
+    ArrayList<Olympian> olympian = new ArrayList<Olympian>();
     //public ArrayList olympian= new ArrayList();
 
 
@@ -132,7 +132,9 @@ olympian.add(splittedOlymps);
       // main();
         int i;
         for ( i=0; i < olympian.size(); i++ ) {
-            System.out.println(olympian.get(i));
+            System.out.println(olympian.get(i).Name);
+            System.out.println(olympian.get(i).sex);
+            System.out.println(olympian.get(i).age);
 
         }
 

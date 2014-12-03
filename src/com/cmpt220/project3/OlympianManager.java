@@ -141,7 +141,7 @@ olympian.add(splittedOlymps);
         //System.out.println(olympian.size());
        //
        // for debugging purposes
-        System.out.println("testing123");
+       // System.out.println("testing123");
        // System.out.println(olympian);
         return olympian;
 

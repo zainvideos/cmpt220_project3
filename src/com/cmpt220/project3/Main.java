@@ -27,7 +27,8 @@ public class Main {
                 e.printStackTrace();
             }
             xyz.getOlympians();
-System.out.println(xyz.olympian.size());
+//for debugging:
+//System.out.println(xyz.olympian.size());
         }
         else if (args[0].equals("q") || args[0].equals("quit")) {
             //quits app

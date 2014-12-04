@@ -19,6 +19,7 @@ public class TeamManager {
         this.xyz = man;
         //assigning team array size
         team_array = new Team[xyz.olympian.size()/2];
+        System.out.println(team_array.length);
     }
 
 
@@ -30,7 +31,9 @@ public class TeamManager {
 
         Random rand = new Random();
         while (!(templist.size() == 0)) {
-            int current = rand.nextInt() % templist.size();
+            System.out.println(templist.size());
+            int current = rand.nextInt(templist.size()) ;
+            System.out.println(current);
             Olympian temp = templist.get(current);
 
             if(tempFirst==null){
@@ -63,8 +66,9 @@ public class TeamManager {
 
 public Array getTeams(){
     int i;
-    for ( i=0; i < 8; i++ ) {
+    for ( i=0; i < team_array.length; i++ ) {
 System.out.println(team_array[i]);
+
 //team_array.length()
     }
      return null;

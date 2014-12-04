@@ -10,7 +10,9 @@ public class Main {
         OlympianManager xyz = new OlympianManager();
         Event evm = new Event();
         TeamManager teamManager;
-        teamManager =new TeamManager();
+        teamManager =new TeamManager(xyz);
+
+
         //app welcome message
         System.out.println("Welcome To the Smith Family Olympics App. Enter a command or press h for help.");
         System.out.println("Please enter a command or type h for help");
@@ -36,6 +38,13 @@ public class Main {
             evm.getEvents();
         }
         else if (args[0].equals("t") || args[0].equals("teams")) {
+            try {
+                xyz.readLines();
+                xyz.OpenFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            teamManager.Teams();
             teamManager.getTeams();
         }
         else if (args[0].equals("q") || args[0].equals("quit")) {

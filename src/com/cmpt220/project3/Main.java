@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         OlympianManager xyz = new OlympianManager();
-
+        Event evm = new Event();
         //app welcome message
         System.out.println("Welcome To the Smith Family Olympics App. Enter a command or press h for help.");
         System.out.println("Please enter a command or type h for help");
@@ -29,6 +29,9 @@ public class Main {
             xyz.getOlympians();
 //for debugging:
 //System.out.println(xyz.olympian.size());
+        }
+        else if (args[0].equals("e") || args[0].equals("events")) {
+            evm.getEvents();
         }
         else if (args[0].equals("q") || args[0].equals("quit")) {
             //quits app

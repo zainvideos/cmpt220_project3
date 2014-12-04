@@ -24,7 +24,8 @@ import java.util.Collections;
 public class OlympianManager {
     ArrayList<Olympian> olympian = new ArrayList<Olympian>();
     //public ArrayList olympian= new ArrayList();
-
+    int maleCount = 0;
+    int femaleCount = 0;
 
    // public OlympianManager (String cat) {
 //olympians= new ArrayList();
@@ -86,9 +87,11 @@ public class OlympianManager {
             Sex sextemp;
             if (splittedData[1].equals("M")) {
             sextemp = Sex.MALE;
+                maleCount++;
             }
             else {
                 sextemp = Sex.FEMALE;
+                femaleCount++;
             }
 // format string data into olympian data
         Olympian splittedOlymps= new Olympian(splittedData[0],sextemp,Integer.parseInt(splittedData[2]));

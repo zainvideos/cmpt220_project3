@@ -18,21 +18,46 @@ public class TeamManager {
         team_array = new Team[xyz.olympian.size()/2];
     }
     public void Teams() {
-
+        int teamcount = 0;
+        Olympian tempFirst = null, tempSecond;
         ArrayList<Olympian> templist = new ArrayList<Olympian>(xyz.olympian);
-        while (!(xyz.olympian.size() == 0)) {
-            //Set up random number generator
-            Random rand = new Random();
-            rand.nextInt(xyz.olympian.size());
-            for (int j=0;j < 5;j++) {
-                System.out.printf("%12d ",rand.nextInt());
-                System.out.print(rand.nextLong());
-                System.out.println();
+
+        Random rand = new Random();
+        while (!(templist.size() == 0)) {
+            int current = rand.nextInt() % templist.size();
+            Olympian temp = templist.get(current);
+
+            if(tempFirst==null){
+                tempFirst= new Olympian(temp.Name,temp.sex,temp.age);
+                templist.remove(current);
+            }
+            else if (xyz.maleCount==xyz.femaleCount) {
+                if (tempFirst.sex != temp.sex) {
+                    tempSecond= new Olympian(temp.Name,temp.sex,temp.age);
+                    templist.remove(current);
+                    team_array[teamcount] = new Team(tempFirst,tempSecond);
+                    tempFirst = null;
+                    tempSecond = null;
+                    teamcount++;
+                }
             }
 
 
+        else {
+            tempSecond= new Olympian(temp.Name,temp.sex,temp.age);
+            templist.remove(current);
+            team_array[teamcount] = new Team(tempFirst,tempSecond);
+            tempFirst = null;
+            tempSecond = null;
+            teamcount++;
+        }
 
-            //Set up a Team object.
+    }
+
+
+
+
+    //Set up a Team object.
             //Another WHILE loop with a flag that symbolizes the team being made.
             //Pick one player at random using templist.get(YOUR RANDOM NUMBER)
             //Check that it is the required sex
@@ -53,8 +78,6 @@ public class TeamManager {
         //int i = 0;
         // System.out.println(xyz.olympian);
         // Collections.sort(xyz.olympian);
-        System.out.println("The new order:");
-        for (int i = 0; i < xyz.olympian.size(); i++)
-            System.out.println(xyz.olympian.get(i));
+
     }
-}
+

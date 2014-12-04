@@ -2,6 +2,7 @@ package com.cmpt220.project3;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.*;
 import java.util.Random;
 
@@ -10,13 +11,18 @@ import java.util.Random;
  */
 public class TeamManager {
     OlympianManager xyz;
-    // Your team array declaration goes here
+    //  team array declaration goes here
+   // creating new team array
     Team[] team_array;
 
     public TeamManager(OlympianManager man) {
         this.xyz = man;
+        //assigning team array size
         team_array = new Team[xyz.olympian.size()/2];
     }
+
+
+
     public void Teams() {
         int teamcount = 0;
         Olympian tempFirst = null, tempSecond;
@@ -52,10 +58,17 @@ public class TeamManager {
             teamcount++;
         }
 
+    }}
+
+
+public Array getTeams(){
+    int i;
+    for ( i=0; i < 8; i++ ) {
+System.out.println(team_array[i]);
+//team_array.length()
     }
-
-
-
+     return null;
+    }
 
     //Set up a Team object.
             //Another WHILE loop with a flag that symbolizes the team being made.
@@ -79,5 +92,5 @@ public class TeamManager {
         // System.out.println(xyz.olympian);
         // Collections.sort(xyz.olympian);
 
-    }
+
 

@@ -9,6 +9,8 @@ public class Main {
     public static void main(String[] args) {
         OlympianManager xyz = new OlympianManager();
         Event evm = new Event();
+        TeamManager teamManager;
+        teamManager =new TeamManager();
         //app welcome message
         System.out.println("Welcome To the Smith Family Olympics App. Enter a command or press h for help.");
         System.out.println("Please enter a command or type h for help");
@@ -32,6 +34,9 @@ public class Main {
         }
         else if (args[0].equals("e") || args[0].equals("events")) {
             evm.getEvents();
+        }
+        else if (args[0].equals("t") || args[0].equals("teams")) {
+            teamManager.getTeams();
         }
         else if (args[0].equals("q") || args[0].equals("quit")) {
             //quits app

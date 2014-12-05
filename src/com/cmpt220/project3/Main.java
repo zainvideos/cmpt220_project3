@@ -7,10 +7,15 @@ import java.io.File;
 public class Main {
 
     public static void main(String[] args) {
+
+
         OlympianManager xyz = new OlympianManager();
         Event evm = new Event();
         TeamManager teamManager;
         teamManager =new TeamManager(xyz);
+
+
+
 
 
         //app welcome message
@@ -23,13 +28,7 @@ public class Main {
             //try {
 
             //print list of olympians
-            try {
-                xyz.readLines();
-                xyz.OpenFile();
 
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
             xyz.getOlympians();
 //for debugging:
 //System.out.println(xyz.olympian.size());
@@ -38,12 +37,7 @@ public class Main {
             evm.getEvents();
         }
         else if (args[0].equals("t") || args[0].equals("teams")) {
-            try {
-                xyz.readLines();
-                xyz.OpenFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+
             teamManager.Teams();
             teamManager.getTeams();
         }

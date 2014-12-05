@@ -15,11 +15,21 @@ public class TeamManager {
    // creating new team array
     Team[] team_array;
 
+
+
     public TeamManager(OlympianManager man) {
+        try {
+            man.readLines();
+            man.OpenFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         this.xyz = man;
         //assigning team array size
         team_array = new Team[xyz.olympian.size()/2];
-        System.out.println(team_array.length);
+
+        //System.out.println(xyz.olympian.size());
+        System.out.println("t" + team_array.length);
     }
 
 
@@ -31,24 +41,27 @@ public class TeamManager {
 
         Random rand = new Random();
         while (!(templist.size() == 0)) {
-            System.out.println(templist.size());
+            System.out.println("first templist size" + templist.size());
             int current = rand.nextInt(templist.size()) ;
-            System.out.println(current);
+            System.out.println("temp" + current);
             Olympian temp = templist.get(current);
 
             if(tempFirst==null){
-                tempFirst= new Olympian(temp.Name,temp.sex,temp.age);
+                tempFirst=new Olympian(temp.Name,temp.sex,temp.age);
+                        //templist.get(current);
                 templist.remove(current);
             }
             else if (xyz.maleCount==xyz.femaleCount) {
                 if (tempFirst.sex != temp.sex) {
                     tempSecond= new Olympian(temp.Name,temp.sex,temp.age);
+                    System.out.println("BOOO" + tempSecond.Name);
                     templist.remove(current);
                     team_array[teamcount] = new Team(tempFirst,tempSecond);
                     tempFirst = null;
                     tempSecond = null;
                     teamcount++;
                 }
+
             }
 
 
@@ -67,8 +80,8 @@ public class TeamManager {
 public Array getTeams(){
     int i;
     for ( i=0; i < team_array.length; i++ ) {
-System.out.println(team_array[i]);
-
+System.out.println(team_array[i].team_olymp1.Name);
+        System.out.println(team_array[i].team_olymp2);
 //team_array.length()
     }
      return null;

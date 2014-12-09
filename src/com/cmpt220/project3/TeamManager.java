@@ -40,8 +40,31 @@ public class TeamManager {
         ArrayList<Olympian> templist = new ArrayList<Olympian>(xyz.olympian);
 
         Random rand = new Random();
-        while (!(templist.size() == 0)) {
-            System.out.println("first templist size" + templist.size());
+        int current = 0;
+        for (int i = 0; i < templist.size() / 2; i++) {
+            current = rand.nextInt(templist.size());
+            //team_array[i] =
+            Olympian p1 = templist.get(current);
+            Olympian p2 = null;
+            templist.remove(current);
+            boolean found = false;
+            int olympindex = 0;
+            while (!found) {
+                if (templist.get(olympindex).sex != p1.sex) {
+                    p2 = templist.get(olympindex);
+                    templist.remove(p2);
+                    found = true;
+                }
+
+                olympindex++;
+            }
+            team_array[i]= new Team(p1, p2);
+        }
+    }
+
+        //old method
+        /*while ((templist.size() != 0)) {
+          //  System.out.println("first templist size" + templist.size());
             int current = rand.nextInt(templist.size()) ;
             System.out.println("temp" + current);
             Olympian temp = templist.get(current);
@@ -54,11 +77,12 @@ public class TeamManager {
             else if (xyz.maleCount==xyz.femaleCount) {
                 if (tempFirst.sex != temp.sex) {
                     tempSecond= new Olympian(temp.Name,temp.sex,temp.age);
-                    System.out.println("BOOO" + tempSecond.Name);
+                   // System.out.println("BOOO" + tempSecond.Name);
                     templist.remove(current);
                     team_array[teamcount] = new Team(tempFirst,tempSecond);
                     tempFirst = null;
-                    tempSecond = null;
+                    //tempSecond = null;
+
                     teamcount++;
                 }
 
@@ -69,19 +93,23 @@ public class TeamManager {
             tempSecond= new Olympian(temp.Name,temp.sex,temp.age);
             templist.remove(current);
             team_array[teamcount] = new Team(tempFirst,tempSecond);
-            tempFirst = null;
-            tempSecond = null;
+
+              //
+           // tempFirst = null;
+           // tempSecond = null;
+                System.out.println(team_array[teamcount].team_olymp2.age + "HEY MAN");
             teamcount++;
         }
 
     }}
 
+ */
 
 public Array getTeams(){
     int i;
     for ( i=0; i < team_array.length; i++ ) {
 System.out.println(team_array[i].team_olymp1.Name);
-        System.out.println(team_array[i].team_olymp2);
+        System.out.println(team_array[i].team_olymp2.Name);
 //team_array.length()
     }
      return null;

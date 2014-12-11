@@ -6,15 +6,20 @@ import java.io.InputStream;
 import java.io.File;
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args)throws IOException {
 
 
-        OlympianManager xyz = new OlympianManager();
+        OlympianManager olympian_manager=new OlympianManager();
+        Olympian[] olympians=olympian_manager.getOlympians();
+
+        TeamManager team_manager=new TeamManager(olympians);
+        Team[] teams=team_manager.getTeams();
+
+
+
+
         Event evm = new Event();
-        TeamManager teamManager;
-        teamManager =new TeamManager(xyz);
-
-
+        //teamManager.Teams();
 
 
 
@@ -29,7 +34,7 @@ public class Main {
 
             //print list of olympians
 
-            xyz.getOlympians();
+            olympian_manager.getOlympians();
 //for debugging:
 //System.out.println(xyz.olympian.size());
         }
@@ -38,8 +43,8 @@ public class Main {
         }
         else if (args[0].equals("t") || args[0].equals("teams")) {
 
-            teamManager.Teams();
-            teamManager.getTeams();
+
+           team_manager.getTeams();
         }
         else if (args[0].equals("q") || args[0].equals("quit")) {
             //quits app

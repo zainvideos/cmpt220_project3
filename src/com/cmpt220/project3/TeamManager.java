@@ -10,132 +10,78 @@ import java.util.Random;
  * Created by Zain on 11/13/2014.
  */
 public class TeamManager {
-    OlympianManager xyz;
-    //  team array declaration goes here
-   // creating new team array
-    Team[] team_array;
+    Team[] teams;
 
+    public TeamManager(Olympian[] olympians) {
 
+        shuffleArray(olympians);
 
-    public TeamManager(OlympianManager man) {
-        try {
-            man.readLines();
-            man.OpenFile();
-        } catch (IOException e) {
-            e.printStackTrace();
+        int n = olympians.length;
+        teams = new Team[n / 2];
+        boolean[] used = new boolean[n];
+        for (int i = 0; i < n; i++)
+            used[i] = false;
+        for (int i = 0; i < teams.length; i++) {
+            Olympian Olympian1 = getUnsedMale(olympians, used);
+            if (Olympian1 == null)
+                Olympian1 = getUnsedFemale(olympians, used);
+            Olympian Olympian2 = getUnsedFemale(olympians, used);
+            if (Olympian2 == null)
+                Olympian2 = getUnsedMale(olympians, used);
+
+            if (Olympian1 == null)
+                System.out.println(Olympian1);
+            if (Olympian2 == null)
+                System.out.println(Olympian2);
+
+            teams[i] = new Team(Olympian1, Olympian2);
+
         }
-        this.xyz = man;
-        //assigning team array size
-        team_array = new Team[xyz.olympian.size()/2];
 
-        //System.out.println(xyz.olympian.size());
-        System.out.println("t" + team_array.length);
     }
 
-
-
-    public void Teams() {
-        int teamcount = 0;
-        Olympian tempFirst = null, tempSecond;
-        ArrayList<Olympian> templist = new ArrayList<Olympian>(xyz.olympian);
-
-        Random rand = new Random();
-        int current = 0;
-        for (int i = 0; i < templist.size() / 2; i++) {
-            current = rand.nextInt(templist.size());
-            //team_array[i] =
-            Olympian p1 = templist.get(current);
-            Olympian p2 = null;
-            templist.remove(current);
-            boolean found = false;
-            int olympindex = 0;
-            while (!found) {
-                if (templist.get(olympindex).sex != p1.sex) {
-                    p2 = templist.get(olympindex);
-                    templist.remove(p2);
-                    found = true;
-                }
-
-                olympindex++;
+    private Olympian getUnsedMale(Olympian[] olympians, boolean[] used) {
+        for (int i = 0; i < olympians.length; i++) {
+            if (olympians[i].sex == Sex.MALE && used[i] == false) {
+                used[i] = true;
+                return olympians[i];
             }
-            team_array[i]= new Team(p1, p2);
         }
+        return null;
     }
 
-        //old method
-        /*while ((templist.size() != 0)) {
-          //  System.out.println("first templist size" + templist.size());
-            int current = rand.nextInt(templist.size()) ;
-            System.out.println("temp" + current);
-            Olympian temp = templist.get(current);
-
-            if(tempFirst==null){
-                tempFirst=new Olympian(temp.Name,temp.sex,temp.age);
-                        //templist.get(current);
-                templist.remove(current);
+    private Olympian getUnsedFemale(Olympian[] olympians, boolean[] used) {
+        for (int i = 0; i < olympians.length; i++) {
+            if (olympians[i].sex == Sex.FEMALE && used[i] == false) {
+                used[i] = true;
+                return olympians[i];
             }
-            else if (xyz.maleCount==xyz.femaleCount) {
-                if (tempFirst.sex != temp.sex) {
-                    tempSecond= new Olympian(temp.Name,temp.sex,temp.age);
-                   // System.out.println("BOOO" + tempSecond.Name);
-                    templist.remove(current);
-                    team_array[teamcount] = new Team(tempFirst,tempSecond);
-                    tempFirst = null;
-                    //tempSecond = null;
-
-                    teamcount++;
-                }
-
-            }
-
-
-        else {
-            tempSecond= new Olympian(temp.Name,temp.sex,temp.age);
-            templist.remove(current);
-            team_array[teamcount] = new Team(tempFirst,tempSecond);
-
-              //
-           // tempFirst = null;
-           // tempSecond = null;
-                System.out.println(team_array[teamcount].team_olymp2.age + "HEY MAN");
-            teamcount++;
         }
-
-    }}
-
- */
-
-public Array getTeams(){
-    int i;
-    for ( i=0; i < team_array.length; i++ ) {
-System.out.println(team_array[i].team_olymp1.Name);
-        System.out.println(team_array[i].team_olymp2.Name);
-//team_array.length()
-    }
-     return null;
+        return null;
     }
 
-    //Set up a Team object.
-            //Another WHILE loop with a flag that symbolizes the team being made.
-            //Pick one player at random using templist.get(YOUR RANDOM NUMBER)
-            //Check that it is the required sex
-            //If satisfactory, add it to the team you declared above
-            //If you just completed the team, then set the flag so that the while loop will end
-            //REPEAT UNTIL ALL TEAMS ARE DONE
-            //(Obviously, add the team to the array above.)
-            // Your random numbers need to be bound between 0 and list.size() - 1
-            //ints(int randomNumberOrigin, int randomNumberBound)
+    // Implementing Fisher–Yates shuffle
+    // idk if we were allowed to use this method and i know its only worth 5 points but i just really wanted the shuffle to work for self-fulfillment/ learning purposes.
+    static void shuffleArray(Olympian[] ar) {
+        Random rnd = new Random();
+        for (int i = ar.length - 1; i > 0; i--) {
+            int index = rnd.nextInt(i + 1);
+            // Simple swap
+            Olympian a = ar[index];
+            ar[index] = ar[i];
+            ar[i] = a;
         }
+    }
+//THE RANDOMIZATION FINALLY WORKS!
+    int wins =0;
+    int losses=0;
+    public Team[] getTeams() {
+        for(int i=0;i<teams.length;i++) {
+            System.out.println(teams[i].getTeam_olymp1().Name + " and " + teams[i].getTeam_olymp2().Name + wins + "," + losses);
 
-
-
-        //public static void main(String[] args){
-//randomize players and make teams (not done yet)
-
-        //OlympianManager xyz = new OlympianManager();
-        //int i = 0;
-        // System.out.println(xyz.olympian);
-        // Collections.sort(xyz.olympian);
-
-
-
+        }
+        {
+            return teams;
+        }
+    }
+}

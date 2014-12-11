@@ -33,7 +33,7 @@ public class Main {
             //try {
 
             //print list of olympians
-
+// to fix the print without args issue, i would put the println loop here
             olympian_manager.getOlympians();
 //for debugging:
 //System.out.println(xyz.olympian.size());
